@@ -638,7 +638,7 @@ body {
     opacity: 0;
     transform: translate3d(var(--start-x), var(--start-y), var(--start-z)) rotate(var(--start-rot)) scale(0.2);
     filter: blur(2px);
-    animation: flyAssemble 2.5s cubic-bezier(0.25, 1, 0.5, 1) forwards;
+    animation: flyAssemble 4s cubic-bezier(0.25, 1, 0.5, 1) forwards;
     transition: transform 0.3s cubic-bezier(0.25, 1, 0.5, 1), color 0.3s ease, text-shadow 0.3s ease;
 }
 
@@ -647,15 +647,21 @@ body {
         opacity: 0;
         transform: translate3d(var(--start-x), var(--start-y), var(--start-z)) rotate(var(--start-rot)) scale(0.2);
         filter: blur(2px);
+        color: #fff;
     }
     10% {
         opacity: 1;
         filter: blur(1px);
+        color: #fff;
+    }
+    90% {
+        color: #fff;
     }
     100% {
         opacity: 1;
         transform: translate3d(0, 0, 0) rotate(0deg) scale(1);
         filter: blur(0px);
+        color: #000;
     }
 }
 

@@ -39,7 +39,7 @@ document.addEventListener("DOMContentLoaded", () => {
         span.style.setProperty("--start-rot", `${startRot}deg`);
         
         // Staggered animation delay
-        span.style.animationDelay = `${800 + i * 100}ms`;
+        span.style.animationDelay = `${800 + i * 200}ms`;
         
         startBtn.appendChild(span);
     }
@@ -60,7 +60,7 @@ document.addEventListener("DOMContentLoaded", () => {
             char.style.transform = "none";
             char.style.filter = "none";
         });
-    }, 5800);
+    }, 9600);
 
     // The message to type
     const message = "Welcome to my portfolio. I am Shubham Kumar. A Fullstack Software Engineer.";

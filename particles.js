@@ -7,7 +7,7 @@ document.addEventListener("DOMContentLoaded", () => {
     
     // Configurable settings
     const config = {
-        particleCount: 100, // Number of neurons
+        particleCount: 120, // Number of neurons
         maxDistance: 150,   // Distance to draw connections
         baseColor: "56, 189, 248", // RGB for var(--accent) #38bdf8
         speedScale: 0.5
