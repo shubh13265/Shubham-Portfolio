@@ -86,6 +86,21 @@ document.addEventListener("DOMContentLoaded", () => {
             // Speak the message out loud
             const speech = new SpeechSynthesisUtterance(message);
             speech.rate = 0.9; // Slightly slower for clarity
+            
+            // Fetch available voices and try to select a male one
+            const voices = window.speechSynthesis.getVoices();
+            const maleVoice = voices.find(v => 
+                v.name.includes('David') || 
+                v.name.includes('Mark') || 
+                v.name.includes('Guy') || 
+                v.name.includes('Matthew') || 
+                v.name.includes('Male')
+            );
+            
+            if (maleVoice) {
+                speech.voice = maleVoice;
+            }
+            
             window.speechSynthesis.speak(speech);
 
             typeWriter();
