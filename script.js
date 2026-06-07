@@ -8,6 +8,58 @@ document.addEventListener("DOMContentLoaded", () => {
     const startOverlay = document.getElementById("start-overlay");
     const startBtn = document.getElementById("start-btn");
 
+    // Assemble start button text character by character from random directions
+    const btnText = startBtn.textContent.trim();
+    startBtn.textContent = ""; // Clear original text
+    startBtn.style.pointerEvents = "none"; // Disable clicks during animation
+    
+    for (let i = 0; i < btnText.length; i++) {
+        const char = btnText[i];
+        const span = document.createElement("span");
+        
+        if (char === " ") {
+            span.innerHTML = "&nbsp;";
+        } else {
+            span.textContent = char;
+        }
+        
+        span.classList.add("flying-char");
+        
+        // Random starting direction and rotation in 3D
+        const angle = Math.random() * Math.PI * 2;
+        const distance = 600 + Math.random() * 600; // 600px to 1200px
+        const startX = Math.round(Math.cos(angle) * distance);
+        const startY = Math.round(Math.sin(angle) * distance);
+        const startZ = Math.round(Math.random() * 1000 - 500); // -500px to 500px Z-depth
+        const startRot = Math.round(Math.random() * 720 - 360); // -360deg to 360deg
+        
+        span.style.setProperty("--start-x", `${startX}px`);
+        span.style.setProperty("--start-y", `${startY}px`);
+        span.style.setProperty("--start-z", `${startZ}px`);
+        span.style.setProperty("--start-rot", `${startRot}deg`);
+        
+        // Staggered animation delay
+        span.style.animationDelay = `${600 + i * 35}ms`;
+        
+        startBtn.appendChild(span);
+    }
+
+    // Enable hover effects and clicks after assembly animation is complete
+    setTimeout(() => {
+        startBtn.style.animation = "none";
+        startBtn.style.pointerEvents = "auto";
+        startBtn.classList.add("assembled");
+        
+        // Clear inline style animations to allow standard CSS transitions to work on hover
+        const chars = startBtn.querySelectorAll(".flying-char");
+        chars.forEach(char => {
+            char.style.animation = "none";
+            char.style.opacity = "1";
+            char.style.transform = "none";
+            char.style.filter = "none";
+        });
+    }, 2200);
+
     // The message to type
     const message = "Welcome to my portfolio. I am Shubham Kumar. A Fullstack Software Engineer.";
     let typeIndex = 0;
