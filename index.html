@@ -22,7 +22,7 @@
         <!-- Intro Scene -->
         <div id="intro-scene" class="scene active">
             <div id="avatar-container">
-                <img src="assets/full_body_avatar_transparent.png" alt="Shubham Kumar Avatar" id="avatar" class="hidden">
+                <img src="assets/avatar.png" alt="Shubham Kumar Avatar" id="avatar" class="hidden">
                 <div id="speech-bubble" class="hidden">
                     <p id="typing-text"></p>
                 </div>
@@ -70,7 +70,7 @@
                         </div>
 
                         <div class="hero-actions">
-                            <a href="#" class="btn primary-btn">Download Resume</a>
+                            <button id="view-resume-btn" class="btn primary-btn">View Resume</button>
                         </div>
                         <div class="social-links">
                             <a href="mailto:kumarbrbshubham@gmail.com" target="_blank">Email</a>
@@ -164,6 +164,124 @@
                     </form>
                 </section>
             </main>
+        </div>
+    </div>
+
+    <!-- Resume Modal -->
+    <div id="resume-modal" class="modal-overlay hidden">
+        <div class="resume-modal-content">
+            <button id="close-resume" class="close-btn">&times;</button>
+            <div class="resume-paper">
+                <div class="resume-header">
+                    <img src="assets/avatar.png" alt="Shubham Kumar" class="resume-photo">
+                    <div class="resume-contact">
+                        <h1>SHUBHAM KUMAR</h1>
+                        <p>📍 146, Kanyakubj Nagar, Indore (MP), 452005</p>
+                        <p>📞 (+91) 7857867961 &nbsp; ✉️ kumarbrbshubham@gmail.com</p>
+                        <p>🔗 github.com/shubh13265 | linkedin.com/in/shubham-kumar-00bb892a4</p>
+                    </div>
+                </div>
+
+                <div class="resume-section">
+                    <h3>Career Objective:</h3>
+                    <span>Seeking an opportunity to apply my engineering knowledge and problem-solving skills in a dynamic organization. Eager to learn, grow, and contribute effectively to innovative and impactful projects.</span>
+                </div>
+
+                <div class="resume-section">
+                    <h3>Professional Qualification:</h3>
+                    <p>Pursuing B.Tech. from AITR, Indore affiliated to RGTU Bhopal with specialization in CSE. (2023-27) <strong>(CGPA- 8.16)</strong></p>
+                </div>
+
+                <div class="resume-section">
+                    <h3>Educational Qualifications:</h3>
+                    <ul class="resume-list">
+                        <li>HSC from SADN Convent School, CBSE with 76.4 % in 2021.</li>
+                        <li>SSC from ST. MARY'S English School, CBSE with 87.6 % in 2019.</li>
+                    </ul>
+                </div>
+
+                <div class="resume-section">
+                    <h3>Technical Skills:</h3>
+                    <p><strong>C/C++, SQL, DSA, OOPS, PYTHON, HTML, CSS, JAVASCRIPT, MONGODB</strong></p>
+                </div>
+
+                <div class="resume-section">
+                    <h3>Minor project:</h3>
+                    <ul class="resume-list">
+                        <li><strong>Title:</strong> A Real-time Multimodal system for the detection of Deepfakes and AI generated content.</li>
+                        <li><strong>Description:</strong> Developed a platform to help users identify fake and misleading digital content across images, videos, audio and text. The system provides instant verification with clear explanations and gives range of score of having fakes or safe content, helping reduce misinformation and improve trust in online information.</li>
+                        <li><strong>Role:</strong> Projectmanager, DataBaseManagement, TechManager &nbsp;&nbsp; <strong>Duration:</strong> Jan 2026 - June 2026 (6th Semester)</li>
+                    </ul>
+                </div>
+
+                <div class="resume-section">
+                    <h3>Co-curricular Activities</h3>
+                    <ul class="resume-list">
+                        <li>Algo Rush Hackathon'26 <strong>Winner</strong> organized by BPIT college Delhi.</li>
+                        <li>Prayatna 3.0 (36-hr) National level Hackathon <strong>TOP 5 Finalists</strong> + <strong>Best UI / UX Design Award</strong> organized by Acropolis College.</li>
+                        <li><strong>Winner</strong> in DBMS Project exhibition cum competition organized by Acropolis College.</li>
+                        <li>Techtalkshowdown "Debate Competition" (<strong>Winner</strong>) Engineer's Day special organized by IEEE EDS SB Chapter Acropolis College.</li>
+                        <li><strong>Semi Finalists</strong> in SBILife HACK-AI-THON'24 by <strong>Hack2Skill</strong>, work on a prototype of fraud detection and prevention in insurance.</li>
+                        <li><strong>Finalists</strong> in Ujjain Mahakumbh Hackathon 2025, collaborating in a team to build and prototype a project on Health Sanitation.</li>
+                    </ul>
+                </div>
+
+                <div class="resume-section">
+                    <h3>Certifications:</h3>
+                    <ul class="resume-list">
+                        <li>Microsoft Full-Stack Developer Certificate</li>
+                        <li>DataBase management system by IIT Madras</li>
+                        <li>RPA( robotic process Automation)</li>
+                        <li>Data Analytics job simulation by Deloitte</li>
+                    </ul>
+                </div>
+
+                <div class="resume-section">
+                    <table class="resume-table">
+                        <tr><td>Strengths</td><td>: Adaptability, Problem-solving</td></tr>
+                        <tr><td>Areas of Improvement</td><td>: Technical skills, Pronunciation</td></tr>
+                        <tr><td>Hobbies</td><td>: Fitness, Playing Cricket</td></tr>
+                        <tr><td>Areas of interest</td><td>: Public Speaking, Mathematics</td></tr>
+                    </table>
+                </div>
+
+                <div class="resume-section">
+                    <h3>Personal Details:</h3>
+                    <table class="resume-table">
+                        <tr><td>Date of Birth</td><td>: 29-09-2004</td></tr>
+                        <tr><td>Gender</td><td>: Male</td></tr>
+                        <tr><td>Nationality</td><td>: Indian</td></tr>
+                        <tr><td>Marital Status</td><td>: Unmarried</td></tr>
+                        <tr><td>Languages Known</td><td>: Hindi, English, Bhojpuri</td></tr>
+                        <tr><td>Mother Tongue</td><td>: Hindi</td></tr>
+                        <tr><td>Father's Name</td><td>: Mr. Shambhu shankar kumar</td></tr>
+                    </table>
+                </div>
+
+                <div class="resume-section">
+                    <h3>References:</h3>
+                    <p>Mr. Atul Bharat - Group Director-CDC, Acropolis Group of Institutions, atul@acropolis.in</p>
+                    <p>Dr.KamalKumar Sethi, HOD,CSE AITR, kamalsethi@acropolis.in</p>
+                </div>
+
+                <div class="resume-section">
+                    <p><strong>Declaration:</strong> I hereby declare that the information furnished above is true to the best of my knowledge.</p>
+                </div>
+
+                <div class="resume-footer">
+                    <div>
+                        <p><strong>Date:</strong></p>
+                        <p><strong>Place:</strong> Indore</p>
+                    </div>
+                    <div>
+                        <p>Sign</p>
+                    </div>
+                </div>
+                
+                <div style="text-align: center; margin-top: 20px;">
+                    <img src="assets/acropolis_logo.png" alt="Acropolis" style="height: 40px; display: none;"> <!-- Placeholder for logo -->
+                </div>
+            </div>
         </div>
     </div>
 

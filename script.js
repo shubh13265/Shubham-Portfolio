@@ -157,4 +157,34 @@ document.addEventListener("DOMContentLoaded", () => {
             targetSection.style.transform = 'translateY(0)';
         });
     });
+
+    // Resume Modal Logic
+    const viewResumeBtn = document.getElementById("view-resume-btn");
+    const resumeModal = document.getElementById("resume-modal");
+    const closeResumeBtn = document.getElementById("close-resume");
+
+    if (viewResumeBtn && resumeModal && closeResumeBtn) {
+        viewResumeBtn.addEventListener("click", (e) => {
+            e.preventDefault();
+            resumeModal.classList.remove("hidden");
+            // small delay to allow display block to process before opacity transition
+            setTimeout(() => {
+                resumeModal.classList.add("show");
+            }, 10);
+        });
+
+        const closeModal = () => {
+            resumeModal.classList.remove("show");
+            setTimeout(() => {
+                resumeModal.classList.add("hidden");
+            }, 300); // match transition duration
+        };
+
+        closeResumeBtn.addEventListener("click", closeModal);
+        resumeModal.addEventListener("click", (e) => {
+            if (e.target === resumeModal) {
+                closeModal();
+            }
+        });
+    }
 });
