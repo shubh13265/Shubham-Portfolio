@@ -39,7 +39,7 @@ document.addEventListener("DOMContentLoaded", () => {
         span.style.setProperty("--start-rot", `${startRot}deg`);
         
         // Staggered animation delay
-        span.style.animationDelay = `${600 + i * 35}ms`;
+        span.style.animationDelay = `${800 + i * 100}ms`;
         
         startBtn.appendChild(span);
     }
@@ -47,6 +47,8 @@ document.addEventListener("DOMContentLoaded", () => {
     // Enable hover effects and clicks after assembly animation is complete
     setTimeout(() => {
         startBtn.style.animation = "none";
+        startBtn.style.opacity = "1";
+        startBtn.style.transform = "translateZ(0) rotateY(0deg) scale(1)";
         startBtn.style.pointerEvents = "auto";
         startBtn.classList.add("assembled");
         
@@ -58,7 +60,7 @@ document.addEventListener("DOMContentLoaded", () => {
             char.style.transform = "none";
             char.style.filter = "none";
         });
-    }, 2200);
+    }, 5800);
 
     // The message to type
     const message = "Welcome to my portfolio. I am Shubham Kumar. A Fullstack Software Engineer.";
