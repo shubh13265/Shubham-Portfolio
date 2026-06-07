@@ -853,3 +853,109 @@ body {
     justify-content: space-between;
     margin-top: 40px;
 }
+
+/* =========================================
+   RESPONSIVE DESIGN (Tablets & Laptops)
+   ========================================= */
+@media (max-width: 1024px) {
+    #avatar-container.moved-right {
+        left: 50%;
+        top: 15%;
+        transform: translate(-50%, -50%) scale(0.45);
+    }
+    
+    #floating-nav {
+        position: absolute;
+        top: 30%;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 95%;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 0.5rem;
+    }
+    
+    .nav-item {
+        padding: 0.8rem 1.2rem;
+        font-size: 0.95rem;
+    }
+    
+    #content-display {
+        position: absolute;
+        top: 45%;
+        left: 5%;
+        width: 90%;
+        height: 50%;
+        padding: 2rem;
+    }
+    
+    .projects-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* =========================================
+   RESPONSIVE DESIGN (Mobile Phones)
+   ========================================= */
+@media (max-width: 768px) {
+    #avatar-container {
+        transform: translate(-50%, -50%) scale(0.8);
+    }
+    
+    #avatar-container.moved-right {
+        top: 12%;
+        transform: translate(-50%, -50%) scale(0.35);
+    }
+    
+    #floating-nav {
+        top: 24%;
+        gap: 0.4rem;
+    }
+    
+    .nav-item {
+        padding: 0.6rem 1rem;
+        font-size: 0.85rem;
+    }
+    
+    #content-display {
+        top: 42%;
+        left: 3%;
+        width: 94%;
+        height: 55%;
+        padding: 1.2rem;
+    }
+    
+    h1 {
+        font-size: 2rem;
+    }
+    
+    .hero-actions {
+        flex-direction: column;
+    }
+    
+    .social-links {
+        gap: 15px;
+        justify-content: center;
+    }
+    
+    .stats-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .resume-modal-content {
+        width: 95%;
+        height: 95vh;
+    }
+    
+    .resume-header {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+    
+    .resume-contact {
+        text-align: center;
+        margin-top: 15px;
+    }
+}
