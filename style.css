@@ -677,6 +677,34 @@ body {
     text-shadow: 0 0 15px #fff, 0 0 25px var(--accent) !important;
 }
 
+/* Social Links styling in Hero Section */
+.social-links {
+    display: flex;
+    gap: 30px;
+    margin-top: 30px;
+    flex-wrap: wrap;
+}
+
+.social-links a {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    color: #e0e0e0;
+    text-decoration: none;
+    font-size: 1.15rem;
+    transition: all 0.3s ease;
+}
+
+.social-links a i {
+    font-size: 1.3rem;
+}
+
+.social-links a:hover {
+    color: var(--accent);
+    transform: translateY(-3px);
+    text-shadow: 0 0 10px var(--accent-glow);
+}
+
 /* Resume Modal Styles */
 .modal-overlay {
     position: fixed;
