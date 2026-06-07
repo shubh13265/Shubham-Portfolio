@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shubham Kumar | Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;800&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Start Overlay for Autoplay Policy -->
+    <div id="start-overlay">
+        <button id="start-btn" class="btn primary-btn" style="font-size: 1.5rem; padding: 1rem 3rem;">WELCOME TO MY PORTFOLIO</button>
+    </div>
+
+    <!-- 3D Neuron Background Canvas -->
+    <canvas id="neuron-canvas"></canvas>
+
+    <div id="app">
+        <!-- Intro Scene -->
+        <div id="intro-scene" class="scene active">
+            <div id="avatar-container">
+                <img src="assets/avatar.png" alt="Shubham Kumar Avatar" id="avatar" class="hidden">
+                <div id="speech-bubble" class="hidden">
+                    <p id="typing-text"></p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Main Content Scene (Revealed later) -->
+        <div id="main-content" class="scene hidden">
+            <nav id="floating-nav">
+                <button class="nav-item" data-target="hero">Home</button>
+                <button class="nav-item" data-target="about">About Me</button>
+                <button class="nav-item" data-target="experience">Experience</button>
+                <button class="nav-item" data-target="tech">Technology Stack</button>
+                <button class="nav-item" data-target="certifications">Certifications</button>
+                <button class="nav-item" data-target="hackathons">Hackathons</button>
+                <button class="nav-item" data-target="projects">Projects</button>
+                <button class="nav-item" data-target="contact">Contact</button>
+            </nav>
+
+            <main id="content-display">
+                <!-- Sections will be injected here via JS or toggled -->
+                <section id="hero" class="content-section">
+                    <div class="hero-content">
+                        <h1>Hi, I'm Shubham 👋</h1>
+                        <p class="tagline">AI & Full-Stack Developer | Engineering Student | Problem Solver</p>
+                        
+                        <p class="hero-desc">Passionate about building intelligent applications using Artificial Intelligence, Machine Learning, and Modern Web Technologies. I enjoy transforming innovative ideas into practical solutions that solve real-world challenges.</p>
+                        
+                        <ul class="hero-bullets">
+                            <li>🔹 Creator of TruthLens – AI-Powered Misinformation Detection Platform</li>
+                            <li>🔹 AI & Machine Learning Enthusiast</li>
+                            <li>🔹 Full-Stack Developer</li>
+                            <li>🔹 B.Tech Engineering Student</li>
+                            <li>🔹 Open to Internships, Collaborations & Research Opportunities</li>
+                        </ul>
+
+                        <div class="quick-stats">
+                            <h3>Quick Stats</h3>
+                            <div class="stats-grid">
+                                <span>🚀 10+ Academic & Personal Projects</span>
+                                <span>📜 Multiple Industry Certifications</span>
+                                <span>🏆 Hackathon Participant</span>
+                                <span>🤖 AI & ML Developer</span>
+                            </div>
+                        </div>
+
+                        <div class="hero-actions">
+                            <a href="#" class="btn primary-btn">Download Resume</a>
+                        </div>
+                        <div class="social-links">
+                            <a href="mailto:kumarbrbshubham@gmail.com" target="_blank">Email</a>
+                            <a href="https://www.linkedin.com/in/shubham-kumar-00bb892a4" target="_blank">LinkedIn</a>
+                            <a href="https://github.com/shubh13265" target="_blank">GitHub</a>
+                        </div>
+                    </div>
+                </section>
+
+                <section id="about" class="content-section">
+                    <h2>About Me</h2>
+                    <p>Hello! I'm Shubham, a passionate Engineering student with a strong interest in Artificial Intelligence, Machine Learning, Full-Stack Development, and Problem Solving. I enjoy transforming innovative ideas into practical solutions that create real-world impact.</p>
+                    <p>Throughout my academic journey, I have worked on projects involving AI-powered applications, fraud detection systems, healthcare solutions, contract farming platforms, and predictive analytics. My recent work includes TruthLens, an AI-driven platform designed to detect misinformation and analyze the credibility of online content using advanced machine learning techniques.</p>
+                    <p>I continuously explore new technologies and enhance my skills in Python, JavaScript, React, Node.js, Machine Learning, Data Analysis, and Software Development. Alongside technical expertise, I value teamwork, leadership, and effective communication, which help me collaborate successfully on projects and hackathons.</p>
+                    <p>My goal is to build intelligent and scalable solutions that solve meaningful problems while contributing to the future of technology.</p>
+                </section>
+
+                <section id="experience" class="content-section">
+                    <h2>Experience</h2>
+                    <div class="card">
+                        <h3>Web Developer</h3>
+                        <p class="company">Softgigs Solution</p>
+                        <p class="duration">2 months</p>
+                        <p>Worked as a web developer, contributing to various web development projects and enhancing front-end and back-end functionalities.</p>
+                    </div>
+                </section>
+
+                <section id="tech" class="content-section">
+                    <h2>Technology Stack</h2>
+                    <div class="tech-grid">
+                        <span>C</span><span>C++</span><span>Python</span><span>JavaScript</span><span>React.js</span>
+                        <span>Node.js</span><span>Express.js</span><span>MongoDB</span><span>MySQL</span><span>Machine Learning</span>
+                        <span>Scikit-learn</span><span>Pandas</span><span>Git</span><span>GitHub</span><span>Postman</span>
+                        <span>Netlify</span><span>Vercel</span>
+                    </div>
+                </section>
+
+                <section id="certifications" class="content-section">
+                    <h2>Certifications</h2>
+                    <div class="card">
+                        <h3>Microsoft Full Stack Developer</h3>
+                    </div>
+                    <div class="card">
+                        <h3>Job Simulation by Deloitte</h3>
+                    </div>
+                </section>
+
+                <section id="hackathons" class="content-section">
+                    <h2>Hackathons</h2>
+                    <div class="card">
+                        <h3>Smart India Hackathon (SIH)</h3>
+                        <p>Participated in building innovative solutions. Collaborated with a team to tackle real-world problem statements.</p>
+                    </div>
+                </section>
+
+                <section id="projects" class="content-section">
+                    <h2>Projects</h2>
+                    <div class="projects-grid">
+                        <div class="card">
+                            <h3>TruthLens</h3>
+                            <p>An AI-driven platform designed to detect misinformation and analyze the credibility of online content using advanced machine learning techniques.</p>
+                        </div>
+                        <div class="card">
+                            <h3>Fraud Detection System</h3>
+                            <p>Machine learning models built to identify and prevent fraudulent activities efficiently.</p>
+                        </div>
+                        <div class="card">
+                            <h3>Contract Farming Platform</h3>
+                            <p>A solution bridging the gap between farmers and buyers through a reliable digital contract system.</p>
+                        </div>
+                        <div class="card">
+                            <h3>Healthcare Solutions & Predictive Analytics</h3>
+                            <p>Data-driven healthcare apps for predictive analysis and better patient management.</p>
+                        </div>
+                    </div>
+                </section>
+
+                <section id="contact" class="content-section">
+                    <h2>Contact Me</h2>
+                    <p>Feel free to reach out for collaborations or just a friendly chat!</p>
+                    <div class="contact-links-box">
+                        <p><strong>Email:</strong> <a href="mailto:kumarbrbshubham@gmail.com">kumarbrbshubham@gmail.com</a></p>
+                        <p><strong>LinkedIn:</strong> <a href="https://www.linkedin.com/in/shubham-kumar-00bb892a4" target="_blank">Profile</a></p>
+                        <p><strong>GitHub:</strong> <a href="https://github.com/shubh13265" target="_blank">Repository</a></p>
+                    </div>
+                    <form class="contact-form" action="mailto:kumarbrbshubham@gmail.com" method="post" enctype="text/plain">
+                        <input type="text" name="name" placeholder="Your Name" required>
+                        <input type="email" name="email" placeholder="Your Email" required>
+                        <textarea name="message" rows="4" placeholder="Your Message" required></textarea>
+                        <button type="submit" class="btn primary-btn submit-btn">Send Message</button>
+                    </form>
+                </section>
+            </main>
+        </div>
+    </div>
+
+    <script src="particles.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
