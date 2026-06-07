@@ -1,4 +1,4 @@
-# Shubham Kumar's Interactive 3D Portfolio
+# Interactive 3D Portfolio
 
 Welcome to my personal portfolio repository! This project is a highly engaging, interactive web portfolio designed to showcase my skills, projects, and achievements as an AI & Full-Stack Developer.
 
