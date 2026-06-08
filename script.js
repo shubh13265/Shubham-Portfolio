@@ -44,6 +44,9 @@ document.addEventListener("DOMContentLoaded", () => {
         startBtn.appendChild(span);
     }
 
+    // Calculate exact time when animation finishes (stagger + fly time)
+    const totalAnimTime = 800 + (btnText.length * 200) + 4000;
+
     // Enable hover effects and clicks after assembly animation is complete
     setTimeout(() => {
         startBtn.style.animation = "none";
@@ -60,7 +63,7 @@ document.addEventListener("DOMContentLoaded", () => {
             char.style.transform = "none";
             char.style.filter = "none";
         });
-    }, 9600);
+    }, totalAnimTime);
 
     // The message to type
     const message = "Welcome to my portfolio. I am Shubham Kumar. A Fullstack Software Engineer.";
